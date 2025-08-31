@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online Code Editor</h1>
+            <p>Edit HTML, CSS, and JavaScript code and see the results in real-time</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <button id="run-btn">Run Code ▶️</button>
+                <button id="clear-btn">Clear Code 🗑️</button>
+            </div>
+            <div class="toolbar-right">
+                <button id="save-btn">Save Code 💾</button>
+                <button id="load-btn">Load Saved Code 📂</button>
+            </div>
+        </div>
+
+        <div class="editor-container">
+            <div class="code-editors">
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <h3>HTML</h3>
+                        <span class="file-type">.html</span>
+                    </div>
+                    <textarea id="html-code" class="code-editor" placeholder="Write your HTML code here..."><!-- Basic HTML structure -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Welcome to the Code Editor</h1>
+    <p>Edit the code to see changes in real-time.</p>
+    <div id="demo">Try adding some CSS and JavaScript!</div>
+</body>
+</html></textarea>
+                </div>
+
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <h3>CSS</h3>
+                        <span class="file-type">.css</span>
+                    </div>
+                    <textarea id="css-code" class="code-editor" placeholder="Write your CSS code here...">/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+#demo {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-left: 4px solid #3498db;
+}</textarea>
+                </div>
+
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <h3>JavaScript</h3>
+                        <span class="file-type">.js</span>
+                    </div>
+                    <textarea id="js-code" class="code-editor" placeholder="Write your JavaScript code here...">// Add your JavaScript here
+document.addEventListener('DOMContentLoaded', function() {
+    const demoElement = document.getElementById('demo');
+    
+    // Change text after 2 seconds
+    setTimeout(function() {
+        demoElement.innerHTML = 'JavaScript is working! You can edit this code.';
+        demoElement.style.backgroundColor = '#d4edda';
+        demoElement.style.borderLeftColor = '#28a745';
+    }, 2000);
+    
+    // Add click interaction
+    demoElement.addEventListener('click', function() {
+        this.innerHTML = 'You clicked me!';
+        this.style.backgroundColor = '#fff3cd';
+        this.style.borderLeftColor = '#ffc107';
+    });
+});</textarea>
+                </div>
+            </div>
+
+            <div class="preview-pane">
+                <div class="preview-header">
+                    <h3>Output Preview</h3>
+                </div>
+                <iframe id="preview" title="Output Preview"></iframe>
+            </div>
+        </div>
+
+        <footer>
+            <p>Online Code Editor design and dev by divyanshu &copy; 2025 | HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+</body>
+<script src="scripte.js"></script>
+</html>
